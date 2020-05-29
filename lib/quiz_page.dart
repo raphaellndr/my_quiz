@@ -53,8 +53,8 @@ class _QuizPage extends State<QuizPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            CustomText('Question number ${index + 1}'),
-            CustomText('Score : $myScore / $maxScore'),
+            CustomText('Question number ${index + 1}', color: Colors.black),
+            CustomText('Score : $myScore / $maxScore', color: Colors.black),
             Card(
               elevation: 15.0,
               child: Container(
@@ -66,7 +66,7 @@ class _QuizPage extends State<QuizPage> {
                 ),
               )
             ),
-            CustomText(actualQuestion.question,),
+            CustomText(actualQuestion.question, color: Colors.black),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
