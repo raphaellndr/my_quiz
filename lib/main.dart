@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'quiz_page.dart';
+import 'custom_text.dart';
 
 void main() {
   runApp(MyApp());
@@ -59,13 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
             RaisedButton(
               onPressed: start,
               color: Colors.grey[800],
-              child: Text(
-                'Start quiz',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0
-                ),
-              ),
+              child: CustomText('Start quiz')
             )
           ],
         ),

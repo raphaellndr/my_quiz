@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_quizz/main.dart';
 
 import 'question.dart';
+import 'custom_text.dart';
 
 class QuizPage extends StatefulWidget {
 
@@ -53,18 +53,8 @@ class _QuizPage extends State<QuizPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Text(
-              'Question number ${index + 1}',
-              style: TextStyle(
-                fontSize: 20.0
-              ),
-            ),
-            Text(
-              'Score : $myScore / $maxScore',
-              style: TextStyle(
-                fontSize: 20.0
-              ),
-            ),
+            CustomText('Question number ${index + 1}'),
+            CustomText('Score : $myScore / $maxScore'),
             Card(
               elevation: 15.0,
               child: Container(
@@ -76,13 +66,7 @@ class _QuizPage extends State<QuizPage> {
                 ),
               )
             ),
-            Text(
-              actualQuestion.question,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20.0
-              ),
-            ),
+            CustomText(actualQuestion.question,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
@@ -100,13 +84,7 @@ class _QuizPage extends State<QuizPage> {
                     });
                   },
                   color: Colors.grey[800],
-                  child: Text(
-                    'True',
-                    style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0
-                    ),
-                  ),
+                  child: CustomText('True'),
                 ),
                 RaisedButton(
                   elevation: 15.0,
@@ -122,13 +100,7 @@ class _QuizPage extends State<QuizPage> {
                     });
                   },
                   color: Colors.grey[800],
-                  child: Text(
-                    'False',
-                    style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0
-                    ),
-                  ),
+                  child: CustomText('False'),
                 )
               ],
             )
@@ -163,7 +135,7 @@ class _QuizPage extends State<QuizPage> {
                 next();
               },
               color: Colors.grey[800],
-              child: Text('Next'),
+              child: CustomText('Next'),
               textColor: Colors.white,
             )
           ]
